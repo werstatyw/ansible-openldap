@@ -7,9 +7,9 @@
     openldap_domain_name: "{{ pri_domain_name }}"
     pri_domain_name: grigoryev.eu
   tasks:
-    - name: Include ansible-etc-hosts
-      include_role:
-        name: ansible-etc-hosts
+    # - name: Include ansible-etc-hosts
+    #   include_role:
+    #     name: ansible-etc-hosts
     - name: Include ansible-openldap
       include_role:
         name: ansible-openldap
