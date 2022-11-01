@@ -1,11 +1,11 @@
 ---
 - name: Example Playbook
-  hosts: all
+  hosts: linsrv
   vars:
     etc_hosts_add_all_hosts: true
-    openldap_base: "dc=vagrant,dc=local"
+    openldap_base: "dc=grigoryev,dc=eu"
     openldap_domain_name: "{{ pri_domain_name }}"
-    pri_domain_name: vagrant.local
+    pri_domain_name: grigoryev.eu
   tasks:
     - name: Include ansible-etc-hosts
       include_role:

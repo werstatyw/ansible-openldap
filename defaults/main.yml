@@ -21,8 +21,9 @@ openldap_org: example
 
 # Defines OU's to populate
 openldap_organizationalunits:
-  - People
-  - Groups
+  - Group 1
+  - Group 2
+  - Group 3
 
 openldap_phpldapadmin_hide_warnings: true
 
@@ -33,7 +34,7 @@ openldap_populate: false
 # Defines groups to create within OU's
 openldap_posixgroups:
   - name: miners
-    ou: Groups
+    ou: Group 1
     gidNum: 5000 #start group numbers at 5000 and up
 
 # Defines host for phpLDAPadmin
@@ -43,7 +44,7 @@ openldap_users:
   - FirstName: John
     LastName: Smith
     # Defines OU name
-    ou: People
+    ou: Group 1
     # Start user numbers at 10000 and up
     uidNum: 10000
     # Defines gidNum from openldap_posixgroups
@@ -51,6 +52,66 @@ openldap_users:
     password: P@55w0rd
     loginShell: /bin/bash
     homeDirectory: /home/john
+  
+  - FirstName: Gordon
+    LastName: Freeman
+    # Defines OU name
+    ou: Group 1
+    # Start user numbers at 10000 and up
+    uidNum: 10001
+    # Defines gidNum from openldap_posixgroups
+    gidNum: 5000
+    password: P@55w0rd
+    loginShell: /bin/bash
+    homeDirectory: /home/gordon
+  
+  - FirstName: John
+    LastName: Potting
+    # Defines OU name
+    ou: Group 2
+    # Start user numbers at 10000 and up
+    uidNum: 10002
+    # Defines gidNum from openldap_posixgroups
+    gidNum: 5000
+    password: P@55w0rd
+    loginShell: /bin/bash
+    homeDirectory: /home/johnp
+
+  - FirstName: John
+    LastName: Kergauer
+    # Defines OU name
+    ou: Group 2
+    # Start user numbers at 10000 and up
+    uidNum: 10003
+    # Defines gidNum from openldap_posixgroups
+    gidNum: 5000
+    password: P@55w0rd
+    loginShell: /bin/bash
+    homeDirectory: /home/johnk
+
+  - FirstName: Psst
+    LastName: Tsst
+    # Defines OU name
+    ou: Group 3
+    # Start user numbers at 10000 and up
+    uidNum: 10004
+    # Defines gidNum from openldap_posixgroups
+    gidNum: 5000
+    password: P@55w0rd
+    loginShell: /bin/bash
+    homeDirectory: /home/psst
+
+  - FirstName: Tsst
+    LastName: Psst
+    # Defines OU name
+    ou: Group 3
+    # Start user numbers at 10000 and up
+    uidNum: 10005
+    # Defines gidNum from openldap_posixgroups
+    gidNum: 5000
+    password: P@55w0rd
+    loginShell: /bin/bash
+    homeDirectory: /home/tsst
 
 openldap_tld: org
 
