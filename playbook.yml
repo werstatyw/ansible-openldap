@@ -13,5 +13,3 @@
     - name: Include ansible-openldap
       include_role:
         name: ansible-openldap
-        tasks: 
-         - include: config_openldap.yml
