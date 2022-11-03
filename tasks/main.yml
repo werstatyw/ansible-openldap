@@ -4,4 +4,4 @@
   when: ansible_os_family == "Debian"
 
 - include_tasks: config_openldap.yml
-  when: openldap_config|bool
+#  when: openldap_config|bool
