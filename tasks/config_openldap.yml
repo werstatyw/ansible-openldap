@@ -70,6 +70,6 @@
 - name: config_openldap | populating openLDAP # noqa 305
   shell: "ldapadd -x -D {{ openldap_bind_id }} -w {{ openldap_admin_password }} -f /etc/ldap/slapd.d/populate_content.ldif"
   ignore_errors: true
-  #when:
-  #  - openldap_populate is defined
-  #  - openldap_populate|bool
+  when:
+   - openldap_populate is defined
+   - openldap_populate|bool
